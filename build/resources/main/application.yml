@@ -1,0 +1,19 @@
+---
+spring:
+  application.name: spring_ex
+  messages.basename: messages-validation, messages
+  jpa.open-in-view: false
+db:
+  datasource:
+    app:
+      url: ${JDBC_URL:jdbc:postgresql://backend-db:5432/postgres}
+      username: ${JDBC_USERNAME:postgres}
+      password: ${JDBC_PASSWORD:postgres}
+      jpa:
+        package-to-scan:
+          - sample.context
+          - sample.model
+        hibernate:
+          ddl-auto: none
+---
+

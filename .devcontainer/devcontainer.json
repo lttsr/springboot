@@ -1,0 +1,43 @@
+// https://aka.ms/devcontainer.json
+{
+	"name": "spring_ex",
+	"dockerComposeFile": [
+		"./docker-compose.yml"
+	],
+	"service": "workspace",
+	"shutdownAction": "stopCompose",
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"editor.formatOnSave": true,
+				"editor.codeActionsOnSave": {
+					"source.organizeImports": "always"
+				},
+				"java.jdt.ls.java.home": "/docker-java-home",
+				"java.import.gradle.java.home": "/docker-java-home",
+				"java.format.settings.profile": "Google",
+				"java.compile.nullAnalysis.mode": "disabled",
+				"java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml"
+			},
+			"extensions": [
+				"mhutchie.git-graph",
+				"mikestead.dotenv",
+				"EditorConfig.EditorConfig",
+				"vscjava.vscode-lombok",
+				"vscjava.vscode-java-pack",
+				"vscjava.vscode-gradle",
+				"vscjava.vscode-spring-boot-dashboard",
+				"pivotal.vscode-spring-boot",
+				"pivotal.vscode-boot-dev-pack",
+				"ckolkman.vscode-postgres",
+				"rangav.vscode-thunder-client",
+				"visualstudioexptteam.vscodeintellicode"
+			]
+		}
+	},
+	"workspaceFolder": "/home/vscode/workspace",
+	"forwardPorts": [
+		8080
+	],
+	"remoteUser": "vscode"
+}

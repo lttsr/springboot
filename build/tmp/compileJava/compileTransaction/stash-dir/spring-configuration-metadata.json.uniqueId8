@@ -1,0 +1,23 @@
+{
+  "groups": [
+    {
+      "name": "db",
+      "type": "sample.AppProperties",
+      "sourceType": "sample.AppProperties"
+    },
+    {
+      "name": "db.datasource",
+      "type": "sample.AppProperties$DatasourceProps",
+      "sourceType": "sample.AppProperties",
+      "sourceMethod": "getDatasource()"
+    }
+  ],
+  "properties": [
+    {
+      "name": "db.datasource.app",
+      "type": "sample.context.orm.DefaultRepository$DefaultDataSourceProperties",
+      "sourceType": "sample.AppProperties$DatasourceProps"
+    }
+  ],
+  "hints": []
+}
