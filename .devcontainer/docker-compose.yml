@@ -8,6 +8,7 @@ services:
     volumes:
       - ..:/home/vscode/workspace:cached
       - ~/.ssh:/home/vscode/.ssh
+      - backend-gradle-cache:/home/vscode/.gradle
     working_dir: /home/vscode/workspace
     ports:
       - "8080:8080"
